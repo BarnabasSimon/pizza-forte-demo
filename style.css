@@ -243,8 +243,8 @@ a {
 .contact,
 .gallery {
     padding: 105px 8%;
-    background: rgba(10, 10, 10, 0.45);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    backdrop-filter: none;  
 }
 
 .section-title {
@@ -338,8 +338,8 @@ a {
     grid-template-columns: 0.8fr 1.2fr;
     gap: 60px;
     align-items: center;
-    background: rgba(10, 10, 10, 0.45);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    backdrop-filter: none;  
 }
 
 .about h2 {
