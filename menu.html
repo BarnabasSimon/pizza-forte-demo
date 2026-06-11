@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Forte | Étlap</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Pizza<span>Forte</span></a>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Kezdőlap</a>
+            <a href="#full-menu">Étlap</a>
+            <a href="index.html#gallery">Galéria</a>
+            <a href="index.html#reviews">Vélemények</a>
+            <a href="index.html#contact">Kapcsolat</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    </header>
+
+    <section class="menu-hero">
+        <p class="tagline">Pizza Forte étlap</p>
+        <h1>Pizzák</h1>
+        <p>Válaszd ki a kedvenced, szűrj kategória vagy allergén szerint, és tedd kosárba.</p>
+    </section>
+
+    <main class="menu-page" id="full-menu">
+        <aside class="filters">
+            <h2>Szűrők</h2>
+
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Összes</button>
+                <button class="category-btn" data-category="classic">Klasszikus</button>
+                <button class="category-btn" data-category="meat">Húsos</button>
+                <button class="category-btn" data-category="spicy">Csípős</button>
+                <button class="category-btn" data-category="veggie">Vega</button>
+                <button class="category-btn" data-category="premium">Prémium</button>
+            </div>
+
+            <label>
+                Allergén kizárása
+                <select id="allergen-filter">
+                    <option value="none">Nincs szűrés</option>
+                    <option value="gluten">Gluténmentesnek megfelelő</option>
+                    <option value="lactose">Laktózmentesnek megfelelő</option>
+                    <option value="egg">Tojásmentesnek megfelelő</option>
+                    <option value="nuts">Diófélék nélkül</option>
+                </select>
+            </label>
+
+            <p class="small-note">
+                Demo funkció: a szűrő azokat a pizzákat mutatja, amelyeknél nincs megjelölve az adott allergén.
+            </p>
+        </aside>
+
+        <section class="full-menu-list">
+            <div class="section-title left">
+                <p>Teljes étlap</p>
+                <h2>Pizzák</h2>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <aside class="basket" id="basket">
+            <h2>Kosár</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+                <span>Végösszeg:</span>
+                <strong id="cart-total">0 Ft</strong>
+            </div>
+
+            <form class="order-form" id="order-form">
+                <h3>Rendelési adatok</h3>
+
+                <input type="text" id="customer-name" placeholder="Név" required />
+                <input type="tel" id="customer-phone" placeholder="Telefonszám" required />
+                <input type="text" id="customer-address" placeholder="Cím" required />
+                <textarea id="customer-note" placeholder="Megjegyzés"></textarea>
+
+                <button type="submit" class="checkout-btn">Megrendelem</button>
+            </form>
+
+            <p class="small-note">Ez még csak frontend demo, valódi fizetés nélkül.</p>
+        </aside>
+    </main>
+
+    <div class="modal" id="order-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">×</button>
+            <h2>Köszönjük!</h2>
+            <p>Ez egy frontend demo. A rendelés nem került elküldésre.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <h3>Pizza<span>Forte</span></h3>
+            <p>Kézműves pizzák, friss alapanyagokkal.</p>
+        </div>
+
+        <div>
+            <h4>Elérhetőség</h4>
+            <p>📍 Budapest, Példa utca 12.</p>
+            <p>📞 +36 30 123 4567</p>
+            <p>✉️ info@pizzaforte.hu</p>
+        </div>
+
+        <div>
+            <h4>Nyitvatartás</h4>
+            <p>Hétfő–Vasárnap</p>
+            <p>11:00–22:00</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
