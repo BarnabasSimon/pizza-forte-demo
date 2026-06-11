@@ -358,7 +358,6 @@ function renderFeaturedPizzas() {
 
     selected.forEach((pizza) => {
         const card = document.createElement("div");
-
         card.className = "pizza-card";
 
         card.innerHTML = `
@@ -372,30 +371,6 @@ function renderFeaturedPizzas() {
     });
 }
 
-function renderFeaturedPizzas() {
-    const featuredGrid = document.getElementById("featured-pizzas");
-
-    if (!featuredGrid) return;
-
-    const shuffled = [...pizzas].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 3);
-
-    featuredGrid.innerHTML = "";
-
-    selected.forEach((pizza) => {
-        const card = document.createElement("div");
-        card.className = "pizza-card";
-
-        card.innerHTML = `
-            <img src="${pizza.image}" alt="${pizza.name}">
-            <h3>${pizza.name}</h3>
-            <p>${pizza.description}</p>
-            <span>${formatPrice(pizza.price)}</span>
-        `;
-
-        featuredGrid.appendChild(card);
-    });
-}
-
+renderFeaturedPizzas(); 
 renderProducts();
 renderCart();
